@@ -5,7 +5,9 @@ document.querySelector(".slider__buttons-prev").addEventListener('click',functio
 document.querySelector(".slider__buttons-next").addEventListener('click',function() {
     nextSlide()
 },false);
-
+onresize=function(){
+    moveSlide()
+}
 // Slider
 let currentPos = 0;
 let sliderContainer = document.querySelector(".slider__slides-container");
