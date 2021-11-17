@@ -1,7 +1,7 @@
 
 body{
-    background: rgb(189, 231, 241);
-    border: 2px solid white;
+    background: rgb(239 215 215 / 76%);
+    padding: 1em;
    
 }
 header{
@@ -11,19 +11,52 @@ header{
   
   
 }
+h1, h2, h3{
+    color: white;
+    margin: 1em 1em 1em 0;
+  
+    text-shadow: 2px 1px 3px rgba(34, 50, 109, 0.637), 1px 1px 2px #b94242d3;
+    font-family: 'Anton', sans-serif;
+}
+p, div{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 2px 1px 3px rgba(34, 50, 109, 0.637), 1px 1px 2px #b94242d3;
+}
 
-
-
-
+.videoContainer {
+    position: absolute;
+   width: 100%;
+   
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  iframe {
+    /* optional */
+    width: 600px;
+    height: 200px; 
+  }
 
 /* Logo */
+.header-logo-border{
+    border: 3px solid white;
+    margin: 0 1em 1em 0;
+}
 .logo{
     background-color: #000;
     border: 1px solid black;
-    margin-right: 2em;
+    
+    
 }
 .logo__svg{
-    width: 3em;
+    width: 15vw;
 }
 .logo__svg svg path{
     stroke: rgb(253, 253, 253);
@@ -32,7 +65,7 @@ header{
 }
 
 .logo__text{
-    font-size: 0.7em;
+    font-size: 2.5vw;
     color: white;
     margin:0 auto 4px;
     width: fit-content;
@@ -45,14 +78,14 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 350px;
+    max-width: 80%;
     margin: 1em 0.2em;
 }
 .menu__item{
     font-family: 'Bebas Neue', cursive;
     color: rgb(255, 255, 255);
-    font-size: 1em;
-    text-shadow: 2px 1px 3px rgb(42, 62, 135), 1px 1px 0px #b94242;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    text-shadow: 2px 1px 3px rgba(34, 50, 109, 0.637), 1px 1px 2px #b94242d3;
     text-decoration: none;
 }
 .menu__item:hover{
@@ -122,34 +155,46 @@ header{
 .slides img{
     width: 100%;
 }
+
+.slider__text-overlay{
+    position: absolute;
+    top: 30%;
+    left:10%;
+    font-size: 4vw;
+}
 /* Card */
 .card{
     display: flex;
     flex-direction: column;
-    text-shadow: 2px 1px 3px rgb(42, 62, 135), 1px 1px 0px #b94242;
-    max-width: 150px;
+    text-shadow: 2px 1px 3px rgba(34, 50, 109, 0.637), 1px 1px 2px #b94242d3;
+   width:clamp(200px, 30vw, 400px);;
+   min-width: 100px;
     padding: 0.5em;
-    background: white;
+    background-image: linear-gradient(
+338deg, #12294a41, #f2e0e0);
     border-radius: 0.5em;
     font-family: 'Anton', sans-serif;
     margin:0.2em;
+    box-shadow: 2px 2px 8px rgb(149 103 118), 1px 1px 2px #2348ff59;
 }
 .card-img{
     position: relative;
     display: flex;
     flex-direction: column;
+    
 }
 .card-img img{
     border-radius: 0.5em;
-
+    
 }
 .card-title{
+    font-size: clamp(2em, 2vw, 4em);
     position: absolute;
-    padding: 1em;
+    padding: 2.5em 0.5em 0 0.5em;
     color: white;
 }
 .card-text{
-    font-size: 0.5em;
+    font-size: clamp(1em, 0.8vw, 2em);
     padding: 1em 0em;
     text-shadow: none;
 }
@@ -157,4 +202,6 @@ header{
 .featured__card-holder{
 display: flex;
 justify-content: space-around;
+flex-wrap: wrap;
+
 }
