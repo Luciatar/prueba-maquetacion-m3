@@ -31,9 +31,8 @@ height: 100%;
 .model-cont{
     position: absolute;
     z-index: -1;
-    height: 100vw;
-
-    width: 100vw;
+    width: 90vw;
+    height: 90vw;
 }
 
 /* Logo */
